@@ -69,25 +69,19 @@ export default class VokalInteriorDecorator extends Component {
         return (
             <View>
                 <Pano
-                    source={asset('chess-world.jpg')}
+                    source={asset('chillzone.jpg')}
                 />
                 <Pano
                     style={{
                         tintColor: this.state.primaryColor
                     }}
-                    source={asset('chess-world-primary.gif')}
+                    source={asset('chillzone-primary.gif')}
                 />
                 <Pano
                     style={{
                         tintColor: this.state.secondaryColor
                     }}
-                    source={asset('chess-world-secondary.gif')}
-                />
-                <Pano
-                    style={{
-                        tintColor: this.state.accentColor
-                    }}
-                    source={asset('chess-world-accent.gif')}
+                    source={asset('chillzone-secondary.gif')}
                 />
                 <View
                     style={{
@@ -99,6 +93,7 @@ export default class VokalInteriorDecorator extends Component {
                         padding: 0.16,
                         transform: [
                             //{matrix: this.state.headMatrix},
+                            {rotateY: 45},
                             {translate: [0, 0.75, -3.5]}
                         ],
                     }}
