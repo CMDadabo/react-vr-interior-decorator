@@ -11,48 +11,20 @@ import {
     VrHeadModel
 } from 'react-vr';
 
-const ColorSwatch = ({color, handleClick}) => (
-    <VrButton style={{flex: 1, width: 0.14}} onClick={handleClick}>
-        <View>
-            <View style={{height: 0.2, width:0.2, backgroundColor: color, borderColor: "rgba(0,0,0,0.2)", borderWidth: 0.01 }} />
-        </View>
-    </VrButton>
-);
+import ColorSwatch from './ColorSwatch';
 
-const primaryColors = [
-    "rgba(238,238,232,0.99)",
-    "rgba(060,059,059,0.99)",
-    "rgba(193,061,059,0.99)",
-    "rgba(000,139,191,0.99)",
-    "rgba(208,165,133,0.99)",
-    "rgba(244,213,171,0.99)",
-    "rgba(196,203,179,0.99)"
-];
-const secondaryColors = [
-    "rgba(108,123,129,0.99)",
-    "rgba(172,161,144,0.99)",
-    "rgba(237,235,231,0.99)",
-    "rgba(238,238,232,0.99)",
-    "rgba(192,139,110,0.99)",
-    "rgba(248,237,217,0.99)",
-    "rgba(243,241,236,0.99)"
-];
-const accentColors = [
-    "rgba(108,123,129,0.99)",
-    "rgba(240,241,236,0.99)",
-    "rgba(162,162,161,0.99)",
-    "rgba(191,191,189,0.99)",
-    "rgba(247,248,244,0.99)",
-    "rgba(248,237,217,0.99)",
-    "rgba(250,241,227,0.99)"
-];
-
+import {
+    primaryColors,
+    secondaryColors,
+    accentColors
+} from './config/colors';
 
 export default class VokalInteriorDecorator extends Component {
     constructor() {
         super();
         this.state = {
-            primaryColor: "#ffffff01",
+            // primaryColor: "#ffffff01",
+            primaryColor: "rgba(238,238,232,0.99)",
             secondaryColor: "#ffffff01",
             accentColor: "#ffffff01",
             headMatrix: VrHeadModel.headMatrix
